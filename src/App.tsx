@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Items from './Items';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <div>
+        <h1>Custom React Hook with Intersection Observer</h1>
+        <p>An example of a custom hook that can be used to request additional information when a component is scrolled into view.</p>
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          On page load, we hit the fortniteapi.io's /items/list endpoint to get a list of ten items and render item cards.
+          <br/>
+          Then we use the hook to hit /items/get to update the item card with more details when it is scrolled into view
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </div>
+      <Items/>
     </div>
   );
 }
